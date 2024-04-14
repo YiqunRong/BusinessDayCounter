@@ -14,6 +14,7 @@ describe("HolidayRules", () => {
     });
     it("should return adjusted holiday date", () => {
       const holidayRule = {
+        // New Year's Day
         type: "adjusted",
         month: 1,
         day: 1,
@@ -25,6 +26,7 @@ describe("HolidayRules", () => {
     });
     it("should return floating holiday date", () => {
       const holidayRule = {
+        // first Monday of the first week of January 2021
         type: "floating",
         month: 1,
         week: 1,

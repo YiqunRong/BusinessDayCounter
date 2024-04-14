@@ -9,7 +9,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2020-01-01");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(0);
     });
@@ -19,7 +19,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2021-01-01");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(0);
     });
@@ -29,7 +29,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2024-04-20");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(5);
     });
@@ -39,7 +39,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2024-04-18");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(3);
     });
@@ -49,7 +49,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2024-04-15");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(0);
     });
@@ -60,7 +60,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2024-04-15");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(4);
     });
@@ -71,7 +71,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2024-04-19");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(4);
     });
@@ -82,7 +82,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2013-10-14");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(5);
     });
@@ -93,7 +93,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2014-01-01");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(61);
     });
@@ -104,7 +104,7 @@ describe("BusinessDayCounter", () => {
       const secondDate = new Date("2013-01-07");
       const result = businessDayCounter.WeekdaysBetweenTwoDates(
         firstDate,
-        secondDate
+        secondDate,
       );
       expect(result).toBe(0);
     });
@@ -124,7 +124,7 @@ describe("BusinessDayCounter", () => {
         const result = businessDayCounter.BusinessDaysBetweenTwoDates(
           firstDate,
           secondDate,
-          holidayList
+          holidayList,
         );
         expect(result).toBe(1);
       });
@@ -141,7 +141,7 @@ describe("BusinessDayCounter", () => {
         const result = businessDayCounter.BusinessDaysBetweenTwoDates(
           firstDate,
           secondDate,
-          holidayList
+          holidayList,
         );
         expect(result).toBe(0);
       });
@@ -158,7 +158,7 @@ describe("BusinessDayCounter", () => {
         const result = businessDayCounter.BusinessDaysBetweenTwoDates(
           firstDate,
           secondDate,
-          holidayList
+          holidayList,
         );
         expect(result).toBe(59);
       });
@@ -176,7 +176,7 @@ describe("BusinessDayCounter", () => {
         const result = businessDayCounter.BusinessDaysBetweenTwoDates(
           firstDate,
           secondDate,
-          holidayList
+          holidayList,
         );
         expect(result).toBe(61);
       });

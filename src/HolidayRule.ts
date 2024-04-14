@@ -24,7 +24,7 @@ const getFloatingHoliday = (
   year: number,
   month: number,
   week: number,
-  weekday: number
+  weekday: number,
 ): Date => {
   const firstDayOfMonth = new Date(year, month - 1, 1);
   const dayOfWeek = firstDayOfMonth.getDay();
@@ -34,7 +34,7 @@ const getFloatingHoliday = (
 
 export const generateHolidayDate = (
   holidayRule: HolidayRule,
-  year: number
+  year: number,
 ): Date => {
   const { type, month, day, week, weekday } = holidayRule;
   switch (type) {

@@ -30,7 +30,7 @@ class BusinessDayCounter {
 
     const diffDays = Math.floor(
       (inclusiveSecondDate.getTime() - inclusiveFirstDate.getTime()) /
-        (1000 * 60 * 60 * 24)
+        (1000 * 60 * 60 * 24),
     );
     return Math.floor(diffDays / 7) * 5 + (diffDays % 7) + 1;
   }
@@ -38,7 +38,7 @@ class BusinessDayCounter {
   BusinessDaysBetweenTwoDates(
     firstDate: Date,
     secondDate: Date,
-    publicHolidays: (Date | HolidayRule)[]
+    publicHolidays: (Date | HolidayRule)[],
   ): number {
     let weekdays = this.WeekdaysBetweenTwoDates(firstDate, secondDate);
     for (const publicHoliday of publicHolidays) {
@@ -56,7 +56,7 @@ class BusinessDayCounter {
         const endYear = secondDate.getFullYear();
         const years = Array.from(
           { length: endYear - startYear + 1 },
-          (v, i) => startYear + i
+          (v, i) => startYear + i,
         );
         for (const year of years) {
           const holidayDate = generateHolidayDate(publicHoliday, year);
